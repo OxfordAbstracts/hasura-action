@@ -1,5 +1,7 @@
 #!/bin/sh -l
 
+export LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6:$LD_PRELOAD
+
 set -e
 
 if [ -z "$HASURA_ENDPOINT" ]; then
@@ -38,6 +40,5 @@ fi
 # secrets can be printed, they are protected by Github Actions
 echo "Executing $command from ${HASURA_WORKDIR:-./}"
 
-export LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6:$LD_PRELOAD
 
 sh -c "$command"
