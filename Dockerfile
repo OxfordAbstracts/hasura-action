@@ -1,5 +1,7 @@
 FROM frolvlad/alpine-glibc
 
+# from https://github.com/hasura/graphql-engine/issues/4105#issuecomment-609556153 
+
 RUN export LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6:$LD_PRELOAD
 
 RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub  
