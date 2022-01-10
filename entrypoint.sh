@@ -1,6 +1,5 @@
 #!/bin/sh -l
 
-export LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6:$LD_PRELOAD
 
 set -e
 
