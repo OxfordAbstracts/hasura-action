@@ -38,6 +38,6 @@ fi
 # secrets can be printed, they are protected by Github Actions
 echo "Executing $command from ${HASURA_WORKDIR:-./}"
 
-LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6:$LD_PRELOAD
+export LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6:$LD_PRELOAD
 
 sh -c "$command"
