@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-glibc
+FROM frolvlad/alpine-glibc:alpine-3.15_glibc-2.33
 
 # from https://github.com/hasura/graphql-engine/issues/4105#issuecomment-609556153 
 
